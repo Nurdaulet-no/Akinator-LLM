@@ -21,11 +21,9 @@ The project is structured as a web application with a Spring Boot backend provid
 *   **LLM-Powered Character Guessing:** Utilizes the Gemini API with a carefully crafted Russian prompt to guide the LLM's questioning and deduction process.
 *   **Intelligent Questioning:** The LLM dynamically generates questions for the Character game based on conversation history and an algorithmic strategy aiming for efficiency.
 *   **Classic Number Guessing:** A simple, efficient binary search implementation for the Number game.
-*   **Web Interface:** User-friendly web interface built with plain HTML, CSS, and JavaScript.
 *   **Spring Boot Backend:** Robust backend handling game state, API calls, and game logic.
 *   **In-Memory Game Management:** Active games are managed in memory on the backend.
 *   **Dynamic UI:** The frontend updates dynamically based on game progress received from the backend API.
-*   **Custom Background:** Includes a simple canvas-based background effect for a visually appealing interface.
 *   **Russian Language Support:** The game interface and the LLM interaction prompt are primarily in Russian.
 
 ---
