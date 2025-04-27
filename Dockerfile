@@ -17,4 +17,4 @@ RUN apt-get update && apt-get install -y maven -y --no-install-recommends && \
 # Запускаем приложение, когда контейнер стартует
 # Spring Boot по умолчанию запускается на порту 8080
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-jar","/app/target/*.jar"]
