@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background Canvas */
+#background-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.main-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    width: 90%;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+}
+
+button {
+    background: linear-gradient(45deg, #6b48ff, #00ddeb);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    margin: 0.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(107, 72, 255, 0.4);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(107, 72, 255, 0.6);
+}
+
+button:disabled {
+    background: #4a4a6b;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Loading Indicator */
+#loading {
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Game Status */
+.game-status {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.game-status p {
+    color: #e0e0e0;
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+
+/* Question Area */
+.question-area {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideIn 0.5s ease;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.question-area p {
+    font-size: 1.4rem;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Answer Area */
+.answer-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.answer-area button {
+    flex: 1 1 150px;
+    max-width: 200px;
+}
+
+/* Give Up Button */
+#give-up-button {
+    background: linear-gradient(45deg, #ff4757, #ff6b81);
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+}
+
+#give-up-button:hover {
+    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.6);
+}
+
+/* Final Result */
+.final-result {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    animation: fadeIn 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.final-result.win {
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    color: #fff;
+}
+
+.final-result.loss {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    color: #fff;
+}
+
+#final-result-text {
+    font-size: 1.5rem;
+}
+
+#play-again-button, #switch-mode-button {
+    background: linear-gradient(45deg, #00ddeb, #6b48ff);
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    width: 80%;
+    max-width: 300px;
+}
+
+#play-again-button:hover, #switch-mode-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 221, 235, 0.6);
+}
+
+/* Error */
+#error {
+    color: #ff4757;
+    font-size: 1rem;
+    margin-top: 1rem;
+    background: rgba(255, 71, 87, 0.2);
+    padding: 1rem;
+    border-radius: 10px;
+}

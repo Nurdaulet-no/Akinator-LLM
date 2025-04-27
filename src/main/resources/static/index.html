@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акинатор</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Background Canvas for Oil-on-Water Effect -->
+<canvas id="background-canvas"></canvas>
+
+<div class="main-container">
+    <!-- Loading Indicator -->
+    <div id="loading" class="hidden">Загрузка...</div>
+
+    <!-- Start Screen -->
+    <div id="start-screen">
+        <h1>Акинатор</h1>
+        <h2>Выберите игру:</h2>
+        <button id="start-number-game">Угадай число (Тест)</button>
+        <button id="start-character-game">Угадай персонажа (LLM)</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="hidden">
+        <div class="game-status">
+            <p><strong>Тип игры:</strong> <span id="game-type"></span></p>
+            <p><strong>Попыток:</strong> <span id="attempts"></span></p>
+            <p><strong>ID игры:</strong> <span id="game-id"></span></p>
+        </div>
+        <div class="question-area">
+            <p id="display-message"></p>
+        </div>
+        <div id="answer-area" class="answer-area"></div>
+        <button id="give-up-button" class="hidden">Сдаться / Я загадал другое</button>
+        <div id="final-result" class="final-result hidden">
+            <p id="final-result-text"></p>
+            <button id="play-again-button" class="hidden">Играть снова</button>
+            <button id="switch-mode-button" class="hidden">Играть в другой режим</button>
+        </div>
+    </div>
+
+    <!-- Error Area -->
+    <div id="error" class="hidden"></div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
