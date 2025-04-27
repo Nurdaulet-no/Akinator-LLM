@@ -87,7 +87,7 @@ Follow these steps to get your local copy up and running.
     ```bash
     java -jar target/akinator-0.0.1-SNAPSHOT.jar # Replace 0.0.1-SNAPSHOT with the actual version if different
     ```
-    The backend should start, typically running on `http://localhost:8080`.
+    The backend should start on `http://localhost:8080`.
 
 
 2.  **Play the Game!**
@@ -132,15 +132,6 @@ Follow these steps to get your local copy up and running.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-*(**Note:** If you don't have a LICENSE file, create one in the root of your repository and add the standard MIT license text.)*
-
----
-
-## 🙏 Acknowledgements
-
-*   Inspired by the original Akinator game.
-*   Powered by the Gemini LLM API by Google.
-*   Built with the help of the Spring Boot framework and the broader Java/JavaScript open-source communities.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Nurdaulet-no/Akinator-LLM/blob/main/LICENCE) file for details.
 
 ---
