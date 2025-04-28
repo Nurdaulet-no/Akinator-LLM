@@ -12,6 +12,7 @@ Welcome to **Akinator / Акинатор**! This project offers two engaging gue
 2.  **Угадай число (Guess the Number):** A simple, classic game where the computer tries to guess a number you've thought of within a range (1-1000) using a binary search algorithm.
 
 The project is structured as a web application with a Spring Boot backend providing the game logic and API, and a simple HTML/CSS/JavaScript frontend for the user interface.
+Link to the game: https://akinator-llm.onrender.com/
 
 ---
 

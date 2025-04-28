@@ -1,6 +1,5 @@
 // Backend base URL (update for deployment)
 const backendBaseUrl = 'https://akinator-llm.onrender.com';
-
 // Global state
 let currentGameId = null;
 let currentGameType = null;
